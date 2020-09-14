@@ -8,7 +8,7 @@ templates:
 
 parameters:
 - id: snr
-  label: Signal to noise ratio of with unit power signal
+  label: Signal to noise ratio
   dtype: float
   default: 1.
 

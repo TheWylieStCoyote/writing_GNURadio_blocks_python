@@ -1,0 +1,132 @@
+options:
+  parameters:
+    author: Wylie Standage-Beier
+    category: '[GRC Hier Blocks]'
+    cmake_opt: ''
+    comment: ''
+    copyright: ''
+    description: ''
+    gen_cmake: 'On'
+    gen_linking: dynamic
+    generate_options: qt_gui
+    hier_block_src_path: '.:'
+    id: WritingGNURadioBlocks
+    max_nouts: '0'
+    output_language: python
+    placement: (0,0)
+    qt_qss_theme: ''
+    realtime_scheduling: ''
+    run: 'True'
+    run_command: '{python} -u {filename}'
+    run_options: prompt
+    sizing_mode: fixed
+    thread_safe_setters: ''
+    title: Writing GNURadio Blocks
+    window_size: ''
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [8, 8]
+    rotation: 0
+    state: enabled
+
+blocks:
+- name: samp_rate
+  id: variable
+  parameters:
+    comment: ''
+    value: '32000'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [184, 12]
+    rotation: 0
+    state: enabled
+- name: WritingGNURadioBlocks_BitErrorCounter_0
+  id: WritingGNURadioBlocks_BitErrorCounter
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1255, 596]
+    rotation: 0
+    state: true
+- name: WritingGNURadioBlocks_Demodulator_0
+  id: WritingGNURadioBlocks_Demodulator
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1011, 570]
+    rotation: 0
+    state: true
+- name: WritingGNURadioBlocks_Modulator_0
+  id: WritingGNURadioBlocks_Modulator
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [564, 562]
+    rotation: 0
+    state: true
+- name: WritingGNURadioBlocks_bit_source_0
+  id: WritingGNURadioBlocks_bit_source
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [363, 610]
+    rotation: 0
+    state: true
+- name: WritingGNURadioBlocks_channel_0
+  id: WritingGNURadioBlocks_channel
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    snr: '1.0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [762, 564]
+    rotation: 0
+    state: true
+
+connections:
+- [WritingGNURadioBlocks_Demodulator_0, '0', WritingGNURadioBlocks_BitErrorCounter_0,
+  '0']
+- [WritingGNURadioBlocks_Modulator_0, '0', WritingGNURadioBlocks_channel_0, '0']
+- [WritingGNURadioBlocks_bit_source_0, '0', WritingGNURadioBlocks_BitErrorCounter_0,
+  '1']
+- [WritingGNURadioBlocks_bit_source_0, '0', WritingGNURadioBlocks_Modulator_0, '0']
+- [WritingGNURadioBlocks_channel_0, '0', WritingGNURadioBlocks_Demodulator_0, '0']
+
+metadata:
+  file_format: 1
