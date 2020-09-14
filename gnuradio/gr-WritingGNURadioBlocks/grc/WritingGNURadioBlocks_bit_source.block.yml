@@ -1,0 +1,14 @@
+id: WritingGNURadioBlocks_bit_source
+label: bit_source
+category: '[WritingGNURadioBlocks]'
+
+templates:
+  imports: import WritingGNURadioBlocks
+  make: WritingGNURadioBlocks.bit_source()
+
+outputs:
+- domain: stream
+  dtype: byte
+  vlen: 1
+
+file_format: 1

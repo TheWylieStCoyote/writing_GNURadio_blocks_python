@@ -32,4 +32,10 @@ except ImportError:
     pass
 
 # import any pure python here
+from .channel import channel
+from .bit_source import bit_source
+from .Modulator import Modulator
+from .Demodulator import Demodulator
+from .BitErrorCounter import BitErrorCounter
+from .config import config
 #

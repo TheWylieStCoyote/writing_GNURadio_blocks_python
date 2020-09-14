@@ -1,0 +1,28 @@
+id: WritingGNURadioBlocks_channel
+label: channel
+category: '[WritingGNURadioBlocks]'
+
+templates:
+  imports: import WritingGNURadioBlocks
+  make: WritingGNURadioBlocks.channel(${snr})
+
+parameters:
+- id: snr
+  label: Signal to noise ratio of with unit power signal
+  dtype: float
+  default: 1.
+
+inputs:
+- domain: stream
+  dtype: complex
+  vlen: 1
+
+outputs:
+- domain: stream
+  dtype: complex
+  vlen: 1
+
+asserts:
+- ${ snr > 0 }
+
+file_format: 1

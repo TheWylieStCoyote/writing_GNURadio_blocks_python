@@ -19,5 +19,9 @@
 # Boston, MA 02110-1301, USA.
 
 install(FILES
-    DESTINATION share/gnuradio/grc/blocks
+    WritingGNURadioBlocks_channel.block.yml
+    WritingGNURadioBlocks_bit_source.block.yml
+    WritingGNURadioBlocks_Modulator.block.yml
+    WritingGNURadioBlocks_Demodulator.block.yml
+    WritingGNURadioBlocks_BitErrorCounter.block.yml DESTINATION share/gnuradio/grc/blocks
 )

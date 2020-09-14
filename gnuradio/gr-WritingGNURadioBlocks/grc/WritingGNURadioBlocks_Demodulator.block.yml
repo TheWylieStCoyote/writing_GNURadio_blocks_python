@@ -1,0 +1,27 @@
+id: WritingGNURadioBlocks_Demodulator
+label: Demodulator
+category: '[WritingGNURadioBlocks]'
+
+templates:
+  imports: import WritingGNURadioBlocks
+  make: WritingGNURadioBlocks.Demodulator(${constilation}, ${bits_per_symbols})
+
+parameters:
+- id: constilation
+  label: Dictionary of the points in the constilation with keys of the bit patterns
+  dtype: dict
+- id: bits_per_symbols
+  label: The number of bits per symbol
+  dtype: int
+
+inputs:
+- domain: stream
+  dtype: complex
+  vlen: 1
+
+outputs:
+- domain: stream
+  dtype: byte
+  vlen: 1
+
+file_format: 1

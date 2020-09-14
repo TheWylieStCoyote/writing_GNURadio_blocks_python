@@ -1,0 +1,15 @@
+id: WritingGNURadioBlocks_BitErrorCounter
+label: BitErrorCounter
+category: '[WritingGNURadioBlocks]'
+
+templates:
+  imports: import WritingGNURadioBlocks
+  make: WritingGNURadioBlocks.BitErrorCounter()
+
+inputs:
+- domain: stream
+  dtype: byte
+  vlen: 1
+  multiplicity: 2
+
+file_format: 1
